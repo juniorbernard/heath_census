@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Données d'analyse de santé</title>
+    <link rel="stylesheet" href="./health_analysis.css">
+</head>
+
+<body>
+    <nav>
+        <h1>Recensement d'analyse de santé</h1>
+        <ul>
+            <li><a href="./index.html" id="home">Accueil </a></li>
+            <li><a href="./health_contact.html" id="contact">Nous contacter </a></li>
+            <li><input type="text" id="conditionInput" placeholder="Entrez une condition de santé"/> </li>
+            <li><button id='btnSearch'>Rechercher</button>
+            </li>
+
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="analysisForm">
+            <h1>Analyse des données de santé</h1>
+            <div>
+                <label for="name">Nom :</label>
+                <input type="text" id="name">
+            </div>
+            <div>
+                <label>Genre :</label>
+                <label for="male">Homme</label>
+                <input type="radio" name="gender" id="male" value="Male">
+                <label for="female">Femme</label>
+                <input type="radio" name="gender" id="female" value="Female">
+            </div>
+            <div>
+                <label for="age">Âge :</label>
+                <input type="number" id="age">
+            </div>
+            <div>
+                <label for="condition">Condition :</label>
+                <select id="condition">
+                    <option value="">Sélectionnez une condition</option>
+                    <option value="Diabetes">Diabète</option>
+                    <option value="Thyroid">Thyroïde</option>
+                    <option value="High Blood Pressure">Hypertension</option>
+                </select>
+            </div>
+            <button id="addPatient">Ajouter un patient</button>
+            <h2>Rapport d'analyse</h2>
+            <div id="report"></div>
+        </div>
+        <div class="searchCondition">
+            <div id="result"></div>
+        </div>
+    </div>
+    <script src="./health_analysis.js"></script>
+</body>
+
+</html>
